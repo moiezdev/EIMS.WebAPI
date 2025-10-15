@@ -1,37 +1,55 @@
-#
-.vscode
-.DS_Store
-bin
-obj
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore build outputs
+bin/
+obj/
+Migrations/
+
+# Ignore user-specific files
 *.user
 *.suo
-*.log
-*.vs
-*.db
-*.sqlite
-*.sqlite3
-*.pdb
-*.cache
-*.class
-*.dll
-*.exe
-*.lib
-*.so
-*.dylib
-*.ncb
-*.sdf
-*.opensdf
-*.suo
-*.tlb
-*.tlib
-*.tmp
-*.user
 *.userosscache
-*.userprefs
-*.csproj.user
-*.pidb
-*.svclog
-*.pdb
-*.mdb
-*.opendb
-*.VC.db
+*.sln.docstates
+
+# Ignore logs and temporary files
+*.log
+*.tlog
+*.vspscc
+*.vssscc
+*.tmp
+*.swp
+*.DS_Store
+
+# Ignore dependency caches
+*.nuget/
+*.npm/
+node_modules/
+
+# Ignore database files
+*.mdf
+*.ldf
+
+# Ignore migrations
+Migrations/
+
+# Ignore publish output
+publish/
+wwwroot/
+
+# Ignore Rider IDE files
+.idea/
+*.iml
+
+# Ignore sensitive configuration files
+appsettings.json
+appsettings.Development.json
+
+# Ignore JetBrains Rider and Resharper files
+.idea/
+*.sln.iml
+*.sln.ide
+_ReSharper.Caches/
+
+# Ignore MacOS system files
+.DS_Store
