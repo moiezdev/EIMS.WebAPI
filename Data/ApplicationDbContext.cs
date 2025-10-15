@@ -7,9 +7,8 @@ namespace EIMS.WebAPI.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
-        public DbSet<Student> Students { get; set; }
-        public DbSet<Educator> Educators { get; set; }
-        // Add other DbSet properties as needed
+        public DbSet<User> Users { get; set; }
+        public DbSet<SeasonalTest> SeasonalTests { get; set; } // Add SeasonalTest DbSet
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
