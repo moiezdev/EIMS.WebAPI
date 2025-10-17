@@ -94,6 +94,7 @@ namespace EIMS.WebAPI.Controllers
                 : $"OXF_{rolePrefix}_{(int.Parse(lastUser?.UserId?.Split('_').Last() ?? "0") + 1):D3}";
 
             var passwordHasher = new PasswordHasher<User>();
+#pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
             var user = new User
             {
                 UserId = newUser.UserId,
@@ -110,6 +111,7 @@ namespace EIMS.WebAPI.Controllers
                 RegistrationDate = DateTime.UtcNow,
                 PasswordHash = passwordHasher.HashPassword(null, newUser.Password)
             };
+#pragma warning restore CS8625 // Cannot convert null literal to non-nullable reference type.
 
             _context.Users.Add(user);
             _context.SaveChanges();
